@@ -1,0 +1,71 @@
+/* <=576 === smartphone
+>576 && <=768 === tablet
+>768 && <=1200 === laptop
+>1200 === desktop */
+
+/* i due quadrati, #first e #second, verranno riempiti
+di colori DIVERSI a seconda della larghezza dello schermo */
+
+/* CSS "GENERICO", quello applicato di default */
+/* da oggi in poi considereremo questo css "libero" da 
+mediaqueries come gli stili PER SMARTPHONE */
+
+article div {
+  /* sto selezionando entrambi i div dentro gli article */
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+#first {
+  background-color: orange;
+}
+
+#second {
+  margin-top: 2rem;
+  background-color: green;
+}
+
+/* MEDIA QUERIES */
+/* una media query è uno strumento di CSS che permette
+di creare dei blocchi selettori+regole CONDIZIONALI, ovvero
+che si applicheranno solo sulla base di una condizione 
+(tipicamente una larghezza MINIMA dello schermo) */
+
+/* ORA QUI INSERISCO GLI STILI "TABLET" */
+@media screen and (min-width: 576px) {
+  /* gli stili che andrò ad indicare qui dentro NON
+    saranno attivi su smartphone, ma solo su schermi
+    larghi ALMENO 576px */
+  #first {
+    background-color: purple;
+  }
+
+  #second {
+    background-color: grey;
+  }
+}
+
+/* ORA QUI INSERISCO GLI STILI "LAPTOP" */
+@media screen and (min-width: 768px) {
+  article {
+    display: inline-block;
+  }
+
+  #first {
+    background-color: red;
+  }
+
+  #second {
+    background-color: yellow;
+    margin-top: 0rem;
+  }
+}
+
+/* ORA QUI INSERISCO GLI STILI "DESKTOP" */
+@media screen and (min-width: 992px) {
+  main {
+    /* centro i quadrati */
+    text-align: center;
+  }
+}
