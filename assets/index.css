@@ -37,6 +37,9 @@ che si applicheranno solo sulla base di una condizione
   /* gli stili che andrò ad indicare qui dentro NON
     saranno attivi su smartphone, ma solo su schermi
     larghi ALMENO 576px */
+  /* orientation: portrait inoltre ci fornisce la certezza che
+    il dispositivo possiede questa larghezza in modalità "verticale",
+    cioè che il dispositivo NON è ruotato */
   #first {
     background-color: purple;
   }

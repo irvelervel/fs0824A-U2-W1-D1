@@ -1,0 +1,50 @@
+/* STILI MOBILE (default) */
+body {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+main img {
+  max-width: 100%;
+  /* riempie il main con l'immagine su mobile */
+}
+
+header {
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+footer {
+  text-align: center;
+}
+
+footer section:first-of-type {
+  margin: 1rem 0;
+  /* top 1rem, bottom 1rem, left 0, right 0 */
+}
+
+/* centro l'immagine */
+main article {
+  text-align: center;
+}
+
+/* ADATTAMENTO A TABLET/LAPTOP/DESKTOP */
+@media screen and (min-width: 768px) {
+  nav ul li {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  footer section {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
